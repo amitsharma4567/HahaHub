@@ -101,6 +101,7 @@ body {
     border: none;
     outline: none;
     transition: transform 0.2s;
+    border-radius: 10px;
 
 }
 
@@ -117,7 +118,7 @@ header {
 
 footer {
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
     background-color: #FFF287;
     margin: 0px;
 }
