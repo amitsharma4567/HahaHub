@@ -1,4 +1,4 @@
-# 🤣 HaHaHub
+# 🤣 HahaHub
 
 **HaHaHub** is a fun joke generator website built with Node.js, Express, EJS, and Axios, powered by the [JokeAPI](https://jokeapi.dev/).  
 Users can choose joke categories, language, type, and filter out unwanted content — and get a fresh laugh with every click!
