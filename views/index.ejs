@@ -69,6 +69,7 @@
     </div>
 
     <div class="joke-area">
+        <% if(locals.content){ %>
         <% if (content && !content.error) { %>
             <% if (content.type==="single" ) { %>
                 <p>
@@ -85,11 +86,18 @@
                         <% } else { %>
                             <p>No jokes found — your sense of humor is too rare! 🤣</p>
                             <% } %>
+        <% } else {<%
+        <p>👋 Welcome to HaHaHub! Your daily dose of laughter starts here. Pick your preferences and get ready to giggle!</p>
+        <% } %>
+
+
 
 
     </div>
     <footer>
-        <p>&copy;Copyright <%= new Date().getFullYear(); %> | Jokes powered by <a href="https://jokeapi.dev/" target="_blank">JokeAPI</a></p>
+        <p>&copy;Copyright <%= new Date().getFullYear(); %> | Jokes powered by <a href="https://jokeapi.dev/"
+                    target="_blank">JokeAPI</a></p>
+        <button type="submit" class="btn">GitHub Repo.</button>
     </footer>
 
 </body>
