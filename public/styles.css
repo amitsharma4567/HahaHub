@@ -25,14 +25,11 @@
 .slct:focus {
     outline: none;
     box-shadow: 0 0 0 2px #DAA520;
-    /* goldenrod glow instead of blue ring */
     background-color: #FFEC8B;
-    /* slight highlight on focus */
 }
 
 option {
     background-color: #FFF8DC;
-    /* light cream */
     color: #1C1C1C;
 }
 
@@ -68,6 +65,15 @@ body {
 
 @media (max-width: 720px) {
 
+    .joke-form {
+    display: flex;
+    gap:15px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 30px;
+}
+
     .joke-area {
         margin: 20px 100px;
         padding: 20px;
@@ -99,6 +105,9 @@ body {
 .btn {
     background-color: #e9b739;
     border: none;
+    font-family: "Play", sans-serif;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2)
     outline: none;
     transition: transform 0.2s;
     border-radius: 10px;
