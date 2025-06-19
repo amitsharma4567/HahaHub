@@ -118,7 +118,7 @@ header {
 
 footer {
     display: flex;
-    justify-content:space-around;
+    justify-content:space-between;
     background-color: #FFF287;
     margin: 10px;
 }
