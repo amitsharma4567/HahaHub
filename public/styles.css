@@ -1,0 +1,123 @@
+.joke-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 30px;
+}
+
+.joke-form>*>* {
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.slct {
+    background-color: #d6cd1a;
+    font-family: "Play", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    cursor: pointer;
+    appearance: auto;
+}
+
+.slct:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #DAA520;
+    /* goldenrod glow instead of blue ring */
+    background-color: #FFEC8B;
+    /* slight highlight on focus */
+}
+
+option {
+    background-color: #FFF8DC;
+    /* light cream */
+    color: #1C1C1C;
+}
+
+
+
+
+body {
+    background-color: #FFF287;
+    font-family: "Play", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    margin: 0px;
+}
+
+.joke-area {
+    margin: 20px 100px;
+    padding: 20px;
+    width: auto;
+    height: fit-content;
+    border: 5px solid #696105;
+    border-radius: 15px;
+    background-color: #d6cd1a;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Happy Monkey", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 4em;
+    line-height: 1.5;
+    color: #333;
+    text-align: center;
+
+}
+
+@media (max-width: 720px) {
+
+    .joke-area {
+        margin: 20px 100px;
+        padding: 20px;
+        width: auto;
+        height: fit-content;
+        border: 5px solid #696105;
+        border-radius: 15px;
+        background-color: #d6cd1a;
+        box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+        font-family: "Happy Monkey", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 2em;
+        line-height: 1.5;
+        color: #333;
+        text-align: center;
+    }
+}
+
+.setup {
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.delivery {
+    font-style: italic;
+}
+
+.btn {
+    background-color: #e9b739;
+    border: none;
+    outline: none;
+    transition: transform 0.2s;
+
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #d6ad18;
+    margin: 0px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #FFF287;
+    margin: 0px;
+}

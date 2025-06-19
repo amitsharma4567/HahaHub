@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HahaHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Happy+Monkey&family=Inconsolata:wght@200..900&family=Play:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img height=80 src="logo.png" alt="logo" />
+    </header>
+    <div class="container">
+        <form action="/get-joke" method="post" class="joke-form">
+            <div class="categories">
+                <label for="categories">Categories:</label>
+                <select name="categories" id="categories" class="slct">
+                    <option value="Any">Any</option>
+                    <option value="Programming">Programming</option>
+                    <option value="Christmas">Christmas</option>
+                    <option value="Dark">Dark</option>
+                    <option value="Pun">Pun</option>
+                    <option value="Spooky">Spooky</option>
+                    <option value="Misc">Miscellaneous</option>
+                </select>
+            </div>
+
+            <div class="language">
+                <label for="language">Language:</label>
+                <select name="language" id="language" class="slct">
+                    <option value="en">English</option>
+                    <option value="cs">Czech</option>
+                    <option value="de">German</option>
+                    <option value="es">Spanish</option>
+                </select>
+            </div>
+
+            <div class="bFlags">
+                <label for="bFlags">Blacklist Flags:</label>
+                <select name="bFlags" id="bFlags" class="slct">
+                    <option value="">None</option>
+                    <option value="nsfw">Not Safe For Work</option>
+                    <option value="religious">Religious</option>
+                    <option value="political">Political</option>
+                    <option value="racist">Racist</option>
+                    <option value="sexist">Sexist</option>
+                    <option value="explicit">Explicit</option>
+                </select>
+            </div>
+
+            <div class="jokeType">
+                <label for="jokeType">Joke Type:</label>
+                <select name="jokeType" id="jokeType" class="slct">
+                    <option value="single">Single</option>
+                    <option value="twopart">Two Part</option>
+                </select>
+            </div>
+            <div>
+                <button type="submit" class="btn">Get Joke</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="joke-area">
+        <% if (content && !content.error) { %>
+            <% if (content.type==="single" ) { %>
+                <p>
+                    <%= content.joke %>
+                </p>
+                <% } else if (content.type==="twopart" ) { %>
+                    <p class="setup">
+                        <%= content.setup %>
+                    </p>
+                    <p class="delivery">
+                        <%= content.delivery %>
+                    </p>
+                    <% } %>
+                        <% } else { %>
+                            <p>No jokes found — your sense of humor is too rare! 🤣</p>
+                            <% } %>
+
+
+    </div>
+    <footer>
+        <p>&copy;Copyright <%= new Date().getFullYear(); %> | Jokes powered by <a href="https://jokeapi.dev/" target="_blank">JokeAPI</a></p>
+    </footer>
+
+</body>
+
+</html>
