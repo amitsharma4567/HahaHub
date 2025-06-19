@@ -14,24 +14,13 @@
 }
 
 .slct {
-    background-color: #d6cd1a;
+    background-color: #cdc41d;
     font-family: "Play", sans-serif;
     font-weight: 500;
     font-style: normal;
-    cursor: pointer;
-    appearance: auto;
 }
 
-.slct:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px #DAA520;
-    background-color: #FFEC8B;
-}
 
-option {
-    background-color: #FFF8DC;
-    color: #1C1C1C;
-}
 
 
 
@@ -67,15 +56,15 @@ body {
 
     .joke-form {
     display: flex;
+    flex-direction: column;
     gap:15px;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
+    justify-content: space-around;
+    align-items: center;
     margin: 30px;
 }
 
     .joke-area {
-        margin: 20px 100px;
+        margin: 5px;
         padding: 20px;
         width: auto;
         height: fit-content;
@@ -86,7 +75,7 @@ body {
         font-family: "Happy Monkey", sans-serif;
         font-weight: 300;
         font-style: normal;
-        font-size: 2em;
+        font-size: 1.5em;
         line-height: 1.5;
         color: #333;
         text-align: center;
@@ -106,8 +95,9 @@ body {
     background-color: #e9b739;
     border: none;
     font-family: "Play", sans-serif;
+    font-size: large;
     font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2)
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
     outline: none;
     transition: transform 0.2s;
     border-radius: 10px;
